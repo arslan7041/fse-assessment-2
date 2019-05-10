@@ -17,7 +17,8 @@ public class Product {
     String color;
     double price;
 
-    public Product(String category, String brand, String color, double price) {
+    public Product(int id, String category, String brand, String color, double price) {
+        this.id = id;
         this.category = category;
         this.brand = brand;
         this.color = color;
