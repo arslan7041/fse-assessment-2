@@ -22,15 +22,16 @@ public class ProductService {
     }
 
     public List<Product> filterByBrand(String brand){
-        return productRepository.findByBrand();
+        return productRepository.findByBrand(brand);
     }
 
     public List<Product> filterByColor(String color){
-        return productRepository.findByColor();
+        return productRepository.findByColor(color);
     }
 
     public List<Product> filterByPrice(String price){
-        return productRepository.findByPrice();
+        double doublePrice = Double.valueOf(price).doubleValue();
+        return productRepository.findByPrice(doublePrice);
     }
 
 
