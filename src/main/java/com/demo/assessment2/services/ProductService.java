@@ -1,5 +1,13 @@
 package com.demo.assessment2.services;
 
+import com.demo.assessment2.models.Product;
+import com.demo.assessment2.repositories.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import java.util.List;
+
 public class ProductService {
 
     private ProductRepository productRepository;
@@ -9,9 +17,15 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public void addProduct(Product product) {
+    public void save(Product product) {
         productRepository.save(product);
     }
+
+    public List<Product> filterByBrand(String brand){
+        return productRepository.findByBrand();
+    }
+
+
 
 
 }
