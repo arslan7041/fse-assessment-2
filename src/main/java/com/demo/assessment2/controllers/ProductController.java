@@ -22,12 +22,12 @@ public class ProductController {
     }
 
     @GetMapping("/products/filter/{color}")
-    public List<Product> filterByBrand(@PathVariable String color){
+    public List<Product> filterByColor(@PathVariable String color){
         return productService.filterByColor(color);
     }
 
     @GetMapping("/products/filter/{price}")
-    public List<Product> filterByBrand(@PathVariable String price){
+    public List<Product> filterByPrice(@PathVariable String price){
         return productService.filterByPrice(price);
     }
 }
