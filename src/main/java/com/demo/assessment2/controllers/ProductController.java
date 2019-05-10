@@ -20,4 +20,14 @@ public class ProductController {
     public List<Product> filterByBrand(@PathVariable String brand){
         return productService.filterByBrand(brand);
     }
+
+    @GetMapping("/products/filter/{color}")
+    public List<Product> filterByBrand(@PathVariable String color){
+        return productService.filterByColor(color);
+    }
+
+    @GetMapping("/products/filter/{price}")
+    public List<Product> filterByBrand(@PathVariable String price){
+        return productService.filterByPrice(price);
+    }
 }

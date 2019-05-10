@@ -25,6 +25,16 @@ public class ProductService {
         return productRepository.findByBrand();
     }
 
+    public List<Product> filterByColor(String color){
+        return productRepository.findByColor();
+    }
+
+    public List<Product> filterByPrice(String price){
+        return productRepository.findByPrice();
+    }
+
+
+
 
 
 
